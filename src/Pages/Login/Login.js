@@ -29,7 +29,6 @@ const Login = () => {
       })
       .catch((error) => {
         toast.error(error.message);
-        console.log(error);
         setLoading(false);
       });
   };
@@ -47,10 +46,10 @@ const Login = () => {
     resetPassword(userEmail)
       .then(() => {
         toast.success("Please check your email for reset password");
+        setLoading(false);
       })
       .catch((error) => {
         toast.error(error.message);
-        console.log(error);
         setLoading(false);
       });
   };
